@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seize the Day</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Header section -->
+  <header class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <h1>Seize the Day</h1>
+      <p>Helping you get the most out of your day</p>
+    </div>
+  </header>
+
+  <!-- Current Date and Time section -->
+  <section class="bg-light py-4">
+    <div class="container text-center">
+      <h2>Current Date and Time</h2>
+      <p id="currentDateTime"></p>
+      <button id="toggleTheme" class="btn btn-primary">Toggle Theme</button>
+    </div>
+  </section>
+
+  <div class="container mt-4">
+    <div class="row">
+
+      <!-- To-Do List section -->
+      <section class="col-lg-6 mb-4">
+        <div class="bg-light p-4">
+          <h2>To-Do List</h2>
+          <input type="text" id="taskInput" placeholder="Add a new task">
+          <button id="addTaskBtn">Add Task</button>
+          <button id="clearListBtn">Clear List</button>
+          <div class="task-list-container"> <!-- Added container for the task list -->
+          <ul id="taskList"></ul> 
+        </div>
+      </section>
+
+      <!-- Pomodoro Timer and Alarm/Reminder section -->
+      <section class="col-lg-6">
+        <div class="row">
+
+          <!-- Pomodoro Timer section -->
+          <div class="col-md-12 mb-4">
+            <div class="bg-light p-4">
+              <h2>Pomodoro Timer</h2>
+              <div id="timerButtons">
+                <button id="focusTimerBtn">Focus Time</button>
+                <button id="shortBreakBtn">Short Break</button>
+                <button id="longBreakBtn">Long Break</button>
+              </div>
+              <!-- Your pomodoro timer content here -->
+              <div id="timer">
+                <div id="timerDisplay">25:00</div>
+                <button id="startTimerBtn">Start</button>
+                <button id="resetTimerBtn">Reset</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alarm/Reminder section -->
+          <div class="col-md-12">
+            <div class="bg-light p-4">
+              <h2>Alarm/Reminder</h2>
+              <!-- Your alarm/reminder content here -->
+              <input type="time" id="alarmTime">
+              <button id="setAlarmBtn">Set Alarm</button>
+              <ul id="alarmList"></ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

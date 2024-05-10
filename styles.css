@@ -1,0 +1,41 @@
+body {
+    background-color: #fff; /* White background */
+    color: #333; /* Black text */
+  }
+  
+  /* Sections */
+  section {
+    background-color: #f0f0f0; /* Light grey background for sections */
+  }
+  
+  /* Headers */
+  h1, h2 {
+    color: #333; /* Black headers */
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #333; /* Black buttons */
+    color: #fff; /* White text */
+  }
+  
+  /* Links */
+  a {
+    color: #333; /* Black links */
+  }
+  
+  /* To-Do List Section */
+  .to-do-list {
+    background-color: #fff; /* White background for the to-do list section */
+  }
+  
+  /* Pomodoro Timer Section */
+  .pomodoro-timer {
+    background-color: #f0f0f0; /* Light grey background for the pomodoro timer section */
+  }
+  
+  /* Current Date Section */
+  .current-date {
+    background-color: #f0f0f0; /* Light grey background for the current date section */
+  }
+  
