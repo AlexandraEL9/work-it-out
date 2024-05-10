@@ -1,3 +1,11 @@
+// theme light/dark mode
+ // Function to toggle between light and dark mode
+ const toggleThemeBtn = document.getElementById('toggleTheme');
+ toggleThemeBtn.addEventListener('click', function() {
+     // Toggle the 'dark-mode' class on the body element
+     document.body.classList.toggle('dark-mode');
+ });
+
 //current date and time section
 document.addEventListener('DOMContentLoaded', function() {
     // Function to update the current date and time
@@ -18,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
         currentDateTimeElement.textContent = `${formattedDate} ${formattedTime}`;
     }
 
-    // Initial call to updateDateTime
-    updateDateTime();
+    // Function to update the date and time every second
+    function updateTimeContinuously() {
+        updateDateTime();
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+    }
 
-    // Function to toggle between light and dark mode
-    const toggleThemeBtn = document.getElementById('toggleTheme');
-    toggleThemeBtn.addEventListener('click', function() {
-        // Toggle the 'dark-mode' class on the body element
-        document.body.classList.toggle('dark-mode');
-    });
+    // Initial call to updateTimeContinuously
+    updateTimeContinuously();
 });
