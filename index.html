@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seize the Day</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -32,11 +33,12 @@
       <section class="col-lg-6 mb-4">
         <div class="bg-light p-4">
           <h2>To-Do List</h2>
-          <input type="text" id="taskInput" placeholder="Add a new task">
-          <button id="addTaskBtn">Add Task</button>
-          <button id="clearListBtn">Clear List</button>
-          <div class="task-list-container"> <!-- Added container for the task list -->
-          <ul id="taskList"></ul> 
+          <input type="text" id="taskInput" class="form-control mb-2" placeholder="Add a new task">
+          <button id="addTaskBtn" class="btn btn-success mb-2">Add Task</button>
+          <button id="clearListBtn" class="btn btn-danger mb-2">Clear List</button>
+          <div class="task-list-container">
+            <ul id="taskList" class="list-group"></ul>
+          </div>
         </div>
       </section>
 
@@ -49,15 +51,14 @@
             <div class="bg-light p-4">
               <h2>Pomodoro Timer</h2>
               <div id="timerButtons">
-                <button id="focusTimerBtn">Focus Time</button>
-                <button id="shortBreakBtn">Short Break</button>
-                <button id="longBreakBtn">Long Break</button>
+                <button id="focusTimerBtn" class="btn btn-info">Focus Time</button>
+                <button id="shortBreakBtn" class="btn btn-info">Short Break</button>
+                <button id="longBreakBtn" class="btn btn-info">Long Break</button>
               </div>
-              <!-- Your pomodoro timer content here -->
               <div id="timer">
                 <div id="timerDisplay">25:00</div>
-                <button id="startTimerBtn">Start</button>
-                <button id="resetTimerBtn">Reset</button>
+                <button id="startTimerBtn" class="btn btn-primary">Start</button>
+                <button id="resetTimerBtn" class="btn btn-secondary">Reset</button>
               </div>
             </div>
           </div>
@@ -66,10 +67,9 @@
           <div class="col-md-12">
             <div class="bg-light p-4">
               <h2>Alarm/Reminder</h2>
-              <!-- Your alarm/reminder content here -->
-              <input type="time" id="alarmTime">
-              <button id="setAlarmBtn">Set Alarm</button>
-              <ul id="alarmList"></ul>
+              <input type="time" id="alarmTime" class="form-control mb-2">
+              <button id="setAlarmBtn" class="btn btn-primary mb-2">Set Alarm</button>
+              <ul id="alarmList" class="list-group"></ul>
             </div>
           </div>
 
@@ -83,6 +83,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <!-- Your custom JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
