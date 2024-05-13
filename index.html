@@ -45,10 +45,10 @@
       <section class="col-lg-6">
         <div class="row">
           <!-- Pomodoro Timer section -->
-<!-- Pomodoro Timer section -->
 <div class="col-md-12 mb-4">
   <div class="bg-light p-4">
     <h2>Pomodoro Timer</h2>
+    <button id="pomodoroModalBtn" class="btn btn-info mb-2" data-toggle="modal" data-target="#pomodoroModal">What is a Pomodoro Timer?</button>
     <div class="button-container" id="timerButtons">
       <button id="focusTimerBtn" class="btn btn-info">Focus Time</button>
       <button id="shortBreakBtn" class="btn btn-info">Short Break</button>
@@ -60,18 +60,60 @@
   </div>
 </div>
 
+<!-- Pomodoro Modal -->
+<div class="modal fade" id="pomodoroModal" tabindex="-1" aria-labelledby="pomodoroModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="pomodoroModalLabel">What is a Pomodoro Timer?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>A Pomodoro Timer is a productivity technique where you break your work into intervals, traditionally 25 minutes in length, separated by short breaks. This method is designed to improve focus and productivity by encouraging frequent short breaks.</p>
+        <p>Typically, you work for one Pomodoro (25 minutes) and then take a short break (5 minutes). After completing four Pomodoros, you take a longer break (15-30 minutes).</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-          <!-- Alarm/Reminder section -->
-          <div class="col-md-12">
-            <div class="bg-light p-4">
-              <h2>Alarm/Reminder</h2>
-              <input type="time" id="alarmTime" class="form-control mb-2">
-              <button id="setAlarmBtn" class="btn btn-primary mb-2">Set Alarm</button>
-              <ul id="alarmList" class="list-group"></ul>
-            </div>
+<!-- Alarm/Reminder section -->
+<!-- Alarm/Reminder section -->
+<div class="col-md-12">
+  <div class="bg-light p-4">
+      <h2>Alarm/Reminder</h2>
+      <input type="time" id="alarmTime" class="form-control mb-2">
+      <input type="text" id="reminderText" class="form-control mb-2" placeholder="Enter reminder text">
+      <button id="setAlarmBtn" class="btn btn-primary mb-2">Set Alarm</button>
+      <ul id="alarmList" class="list-group"></ul>
+  </div>
+</div>
+<!-- Alarm Modal -->
+<div class="modal fade" id="alarmModal" tabindex="-1" aria-labelledby="alarmModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="alarmModalLabel">Alarm</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
           </div>
+          <div class="modal-body">
+              <p id="alarmContent"></p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
 
-        </div>
+
+
       </section>
 
     </div>

@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
     addTaskBtn.addEventListener('click', addTask);
     const clearListBtn = document.getElementById('clearListBtn');
     clearListBtn.addEventListener('click', clearList);
+
+    // Show Pomodoro modal when button is clicked
+    const pomodoroModalBtn = document.getElementById('pomodoroModalBtn');
+    pomodoroModalBtn.addEventListener('click', function() {
+        $('#pomodoroModal').modal('show');
+    });
 });
 
 //pomodorro timer
@@ -111,4 +117,67 @@ document.addEventListener('DOMContentLoaded', function() {
     startTimerBtn.addEventListener('click', startTimer);
     stopTimerBtn.addEventListener('click', stopTimer);
   });
+
   
+  //alarm section
+  document.addEventListener('DOMContentLoaded', function() {
+    const alarmTimeInput = document.getElementById('alarmTime');
+    const reminderTextInput = document.getElementById('reminderText');
+    const setAlarmBtn = document.getElementById('setAlarmBtn');
+    const alarmList = document.getElementById('alarmList');
+    let alarms = [];
+
+    setAlarmBtn.addEventListener('click', function() {
+        const alarmTime = alarmTimeInput.value;
+        const reminderText = reminderTextInput.value;
+        const [hours, minutes] = alarmTime.split(':');
+
+        const alarm = {
+            time: { hours: parseInt(hours), minutes: parseInt(minutes) },
+            text: reminderText
+        };
+
+        alarms.push(alarm);
+        renderAlarm(alarm);
+
+        // Clear input fields after adding the alarm
+        alarmTimeInput.value = '';
+        reminderTextInput.value = '';
+    });
+
+    function renderAlarm(alarm) {
+        const alarmItem = document.createElement('li');
+        alarmItem.classList.add('list-group-item');
+        alarmItem.textContent = `${alarm.time.hours}:${alarm.time.minutes} - ${alarm.text || 'No reminder text'}`;
+        alarmItem.addEventListener('click', function() {
+            displayAlarmModal(alarm);
+        });
+        alarmList.appendChild(alarmItem);
+    }
+
+    function displayAlarmModal(alarm) {
+        const modalTitle = document.getElementById('alarmModalLabel');
+        const modalContent = document.getElementById('alarmContent');
+
+        modalTitle.textContent = 'Alarm';
+        modalContent.textContent = alarm.text || 'No reminder text';
+
+        $('#alarmModal').modal('show');
+    }
+
+    function checkAlarms() {
+        const now = new Date();
+        const currentHours = now.getHours();
+        const currentMinutes = now.getMinutes();
+
+        alarms.forEach((alarm, index) => {
+            if (currentHours === alarm.time.hours && currentMinutes === alarm.time.minutes) {
+                displayAlarmModal(alarm);
+                alarms.splice(index, 1);
+                renderAlarms();
+            }
+        });
+    }
+
+    setInterval(checkAlarms, 1000); // Check every second
+});
