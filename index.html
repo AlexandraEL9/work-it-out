@@ -5,36 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seize the Day</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-light.css">
 </head>
 <body>
 
   <!-- Header section -->
-  <header class="bg-dark text-light py-4">
+  <header class="content-section">
     <div class="container text-center">
       <h1>Seize the Day</h1>
       <p>Helping you get the most out of your day</p>
-      <button id="toggleTheme" class="btn btn-primary">Toggle Theme</button>
+      <button id="toggleTheme" class="btn btn-toggler">Toggle Theme</button>
     </div>
   </header>
 
   <!-- Current Date and Time section -->
-  <section class="bg-light py-4">
+  <section class="content-section">
     <div class="container text-center">
       <h2 id="currentDateTime"></h2>
     </div>
   </section>
 
-  <div class="container mt-4">
+  <div class="container">
     <div class="row">
 
       <!-- To-Do List section -->
       <section class="col-lg-6 mb-4">
-        <div class="bg-light p-4">
+        <div class="content-section">
           <h2>To-Do List</h2>
           <input type="text" id="taskInput" class="form-control mb-2" placeholder="Add a new task">
-          <button id="addTaskBtn" class="btn btn-success mb-2">Add Task</button>
-          <button id="clearListBtn" class="btn btn-danger mb-2">Clear List</button>
+          <button id="addTaskBtn" class="btn mb-2">Add Task</button>
+          <button id="clearListBtn" class="btn mb-2">Clear List</button>
           <div class="task-list-container">
             <ul id="taskList" class="list-group"></ul>
           </div>
@@ -46,17 +46,17 @@
         <div class="row">
           <!-- Pomodoro Timer section -->
 <div class="col-md-12 mb-4">
-  <div class="bg-light p-4">
+  <div class="content-section">
     <h2>Pomodoro Timer</h2>
-    <button id="pomodoroModalBtn" class="btn btn-info mb-2" data-toggle="modal" data-target="#pomodoroModal">What is a Pomodoro Timer?</button>
+    <button id="pomodoroModalBtn" class="btn mb-2" data-toggle="modal" data-target="#pomodoroModal">What is a Pomodoro Timer?</button>
     <div class="button-container" id="timerButtons">
-      <button id="focusTimerBtn" class="btn btn-info">Focus Time</button>
-      <button id="shortBreakBtn" class="btn btn-info">Short Break</button>
-      <button id="longBreakBtn" class="btn btn-info">Long Break</button>
+      <button id="focusTimerBtn" class="btn">Focus Time</button>
+      <button id="shortBreakBtn" class="btn">Short Break</button>
+      <button id="longBreakBtn" class="btn">Long Break</button>
     </div>
     <div class="timer-display" id="timerDisplay">25:00</div>
-    <button id="startTimerBtn" class="btn btn-primary">Start</button>
-    <button id="stopTimerBtn" class="btn btn-secondary">Stop</button>
+    <button id="startTimerBtn" class="btn">Start</button>
+    <button id="stopTimerBtn" class="btn">Stop</button>
   </div>
 </div>
 
@@ -72,10 +72,10 @@
       </div>
       <div class="modal-body">
         <p>A Pomodoro Timer is a productivity technique where you break your work into intervals, traditionally 25 minutes in length, separated by short breaks. This method is designed to improve focus and productivity by encouraging frequent short breaks.</p>
-        <p>Typically, you work for one Pomodoro (25 minutes) and then take a short break (5 minutes). After completing four Pomodoros, you take a longer break (15-30 minutes).</p>
+        <p>Typically, you work for one Pomodoro (25 minutes) and then take a short break (5 minutes). After completing four Pomodoros, you take a longer break (15 minutes).</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -84,11 +84,11 @@
 <!-- Alarm/Reminder section -->
 <!-- Alarm/Reminder section -->
 <div class="col-md-12">
-  <div class="bg-light p-4">
+  <div class="content-section">
       <h2>Alarm/Reminder</h2>
       <input type="time" id="alarmTime" class="form-control mb-2">
       <input type="text" id="reminderText" class="form-control mb-2" placeholder="Enter reminder text">
-      <button id="setAlarmBtn" class="btn btn-primary mb-2">Set Alarm</button>
+      <button id="setAlarmBtn" class="btn mb-2">Set Alarm</button>
       <ul id="alarmList" class="list-group"></ul>
   </div>
 </div>
@@ -106,7 +106,7 @@
               <p id="alarmContent"></p>
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn" data-dismiss="modal">Close</button>
           </div>
       </div>
   </div>

@@ -1,0 +1,52 @@
+/* styles-light.css */
+
+/* Body */
+body {
+  color: #333; /* Dark text color */
+}
+
+/* Header */
+
+.content-section {
+  background: #ECEAF1;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin-top: 30px;
+}
+header h1, header p {
+  color: #333; /* Dark text color */
+}
+
+
+/* Buttons */
+.btn {
+  background-color: #ECEAF1; /* light background on hover */
+  border-color: #333; /* border */
+  color: #333;;
+}
+.btn:hover {
+  background-color: #333;; /* background */
+  border-color: #333; /* border */
+  color: #fff; /* White text color */
+}
+
+/* Modal */
+.modal-content {
+  background-color: #fff; /* White background for modal content */
+  color: #333; /* Dark text color */
+}
+
+.modal-header {
+  background-color: #333; /* background for modal header */
+  color: #fff; /* White text color */
+}
+
+.modal-footer {
+  background-color: #f8f9fa; /* Light gray background for modal footer */
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: gray; /* Change to the desired color */
+    color: white; /* Change to the desired color */
+}
