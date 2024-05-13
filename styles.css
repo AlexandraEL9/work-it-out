@@ -9,8 +9,11 @@ body {
   }
   
   /* Headers */
-  h1, h2 {
-    color: #333; /* Black headers */
+  h1 {
+    color: #fff; /* White headers */
+  }
+  h2 {
+    color: #333;
   }
   
   /* Buttons */
@@ -28,6 +31,10 @@ body {
   .to-do-list {
     background-color: #fff; /* White background for the to-do list section */
   }
+
+  .completed {
+    text-decoration: line-through;
+}
   
   /* Pomodoro Timer Section */
   .pomodoro-timer {
