@@ -57,3 +57,58 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearListBtn = document.getElementById('clearListBtn');
     clearListBtn.addEventListener('click', clearList);
 });
+
+//pomodorro timer
+document.addEventListener('DOMContentLoaded', function() {
+    const focusTime = 25; // in minutes
+    const shortBreakTime = 5; // in minutes
+    const longBreakTime = 15; // in minutes
+    
+    let currentTimer = focusTime * 60; // Initial timer duration in seconds
+    let timerInterval = null;
+    
+    const timerDisplay = document.getElementById('timerDisplay');
+    const startTimerBtn = document.getElementById('startTimerBtn');
+    const stopTimerBtn = document.getElementById('stopTimerBtn');
+    
+    function updateTimerDisplay() {
+      const minutes = Math.floor(currentTimer / 60);
+      const seconds = currentTimer % 60;
+      timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+    
+    function startTimer() {
+      timerInterval = setInterval(function() {
+        currentTimer--;
+        updateTimerDisplay();
+        
+        if (currentTimer <= 0) {
+          clearInterval(timerInterval);
+          // Play alarm sound or do any other actions when the timer ends
+        }
+      }, 1000);
+    }
+    
+    function stopTimer() {
+      clearInterval(timerInterval);
+    }
+    
+    document.getElementById('focusTimerBtn').addEventListener('click', function() {
+      currentTimer = focusTime * 60;
+      updateTimerDisplay();
+    });
+    
+    document.getElementById('shortBreakBtn').addEventListener('click', function() {
+      currentTimer = shortBreakTime * 60;
+      updateTimerDisplay();
+    });
+    
+    document.getElementById('longBreakBtn').addEventListener('click', function() {
+      currentTimer = longBreakTime * 60;
+      updateTimerDisplay();
+    });
+    
+    startTimerBtn.addEventListener('click', startTimer);
+    stopTimerBtn.addEventListener('click', stopTimer);
+  });
+  
