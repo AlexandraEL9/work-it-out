@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             completeBtn.textContent = 'Done';
             completeBtn.classList.add('btn', 'ml-2');
             completeBtn.addEventListener('click', function() {
-                listItem.classList.toggle('completed');
+                listItem.classList.toggle('complete');
             });
             listItem.appendChild(completeBtn);
             taskList.appendChild(listItem);

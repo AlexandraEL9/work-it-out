@@ -30,6 +30,10 @@ header h1, header p {
   color: #fff; /* White text color */
 }
 
+.btn:focus {
+  outline: none !important;
+}
+
 /* Modal */
 .modal-content {
   background-color: #fff; /* White background for modal content */
